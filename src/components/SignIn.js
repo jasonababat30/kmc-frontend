@@ -1,6 +1,7 @@
 import React, {
     useState,
-    useCallback
+    useCallback,
+    useEffect
 } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
@@ -41,6 +42,16 @@ const SignIn = () => {
         email,
         password
     ])
+
+    // Use Effect
+    useEffect(() => {
+        if (sessionStorage.getItem('token')) {
+            navigate("/dashboard")
+        }
+    }, [
+        sessionStorage.getItem('token')
+    ])
+
 
     return (
         <div className="sign-in-page bg-blue-300">
