@@ -1,9 +1,14 @@
 import React, { useContext } from 'react'
 import { DashboardContext } from '../DashboardProvider';
+import { useNavigate } from 'react-router-dom';
 
 import blankProfilePicture from '../../../img/blank-profile-picture.png'
 
 const UserDetails = () => {
+    // Use Navigate
+    const navigate = useNavigate();
+
+    // Use Context
     const { currentUser } = useContext(DashboardContext);
     const {
         firstName,
@@ -12,8 +17,6 @@ const UserDetails = () => {
         contactNumber,
         profilePhoto
     } = currentUser;
-
-    console.log("CURRENT USER: ", currentUser)
 
     return (
         <div className="user-details bg-red-200">
@@ -30,6 +33,11 @@ const UserDetails = () => {
             </div>
             <div>
                 <h2>{contactNumber}</h2>
+            </div>
+            <div>
+                <button className='edit-profile-button bg-yellow-200' onClick={() => {
+                    navigate('/edit-profile')
+                }}>Edit Profile</button>
             </div>
         </div>
     )

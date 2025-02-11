@@ -19,7 +19,9 @@ const Home = () => {
             <button className='signin-button bg-blue-300' onClick={() => {
                 navigate('/sign-in')
             }}>Sign In</button>
-            <button className='signup-button bg-green-300'>Sign Up</button>
+            <button className='signup-button bg-green-300' onClick={() => {
+                navigate('/sign-up')
+            }}>Sign Up</button>
         </div>
     )
 }

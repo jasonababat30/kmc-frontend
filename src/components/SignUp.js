@@ -101,7 +101,7 @@ const SignUp = () => {
                 <div>
                     <label>Email: </label>
                     <input
-                        type='text'
+                        type='email'
                         value={emailAddress}
                         onChange={(e) => {
                             setEmailAddress(e.target.value)

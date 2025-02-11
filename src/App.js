@@ -10,6 +10,7 @@ import Home from './components/Home';
 import SignIn from './components/SignIn';
 import Dashboard from './components/dashboard';
 import SignUp from './components/SignUp';
+import EditProfile from './components/EditProfile';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path='/sign-in' element={<SignIn />} />
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/sign-up' element={<SignUp />} />
+          <Route path='/edit-profile' element={<EditProfile />} />
         </Routes>
       </Router>
     </div>
