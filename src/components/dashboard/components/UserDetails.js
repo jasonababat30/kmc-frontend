@@ -23,15 +23,12 @@ const UserDetails = () => {
                 />
             </div>
             <div>
-                <h1>Name: </h1>
-                <h2>{`${firstName} ${lastName}`}</h2>
+                <h2 className='font-bold'>{`${firstName} ${lastName}`}</h2>
             </div>
             <div>
-                <h1>Email: </h1>
-                <h2>{emailAddress}</h2>
+                <h2 className='italic'>{emailAddress}</h2>
             </div>
             <div>
-                <h1>Contact Number: </h1>
                 <h2>{contactNumber}</h2>
             </div>
         </div>

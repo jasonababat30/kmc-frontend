@@ -15,8 +15,8 @@ const Contact = props => {
             <div className="contact-profilephoto w-10 h-10">
                 <img src={profilePhoto || blankProfilePicture} />
             </div>
-            <div>
-                <h1>{`${firstName} ${lastName}`}</h1>
+            <div className='contact-name my-4'>
+                <h1 className='font-bold'>{`${firstName} ${lastName}`}</h1>
             </div>
         </div>
     )
